@@ -4,7 +4,7 @@ from author.models import Author
 
 
 class AuthorSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(read_only=True)
+    author_id = serializers.IntegerField(read_only=True)
     first_name = serializers.CharField(max_length=64)
     last_name = serializers.CharField(max_length=64)
     age = serializers.IntegerField()
@@ -15,7 +15,7 @@ class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
         fields = [
-            "id",
+            "author_id",
             "first_name",
             "last_name",
             "age",
